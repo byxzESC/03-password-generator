@@ -1,48 +1,70 @@
-// Requirements
-// GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-
-// WHEN asked for character types to include in the password
-// THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
-
-// Assignment code here
-
-
-
 // Get references to the #generate element
-// line 29, button tag
+// line 31 on html, button tag
 var generateBtn = document.querySelector("#generate");
-console.log(generateBtn);
+
+// create the pool for each lowercase, uppercase, numeric, and special characters
+// add them into a single string to generate random password
+var numeric = '0123456789'
+var lowerCase = 'acbdefghijklmnopqrstuvwxyz';
+var special = '!@#$%^&*()';
+var poolOfCharacters = '';
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  // resetting poolOfCharacters every time this function runs
+  poolOfCharacters = '';
+  // ask user for password length
+  var passwordLength = prompt("How many characters would you like your password to contain?");
+  // if password is less than 8 or over 128 characters, ask them to enter length between 8 to 128.
+  if (passwordLength > 128 || passwordLength < 8) {
+    alert("Password must contain a minimum of 8 characters and no more than 128 characters!");
+    writePassword();
+    return;
+  }
+  // prompt to ask user for their preferences
+  userPref();
+  // using the user preference to combine password pool
+  // iterate over user chosen length and randomize chosen character types for the password
+  var password = generatePassword(passwordLength);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+}
 
+// user preferences
+function userPref() {
+  if (confirm("Would you like numeric characters include in password?")) {
+    poolOfCharacters += numeric;
+  }
+  if (confirm("Would you like lowercase characters include in password?")) {
+    poolOfCharacters += lowerCase;
+  }
+  if (confirm("Would you like uppercase characters include in password?")) {
+    poolOfCharacters += lowerCase.toUpperCase();
+  }
+  if (confirm("Would you like special characters include in password?")) {
+    poolOfCharacters += special;
+  }
+  
+  // if user hasn't chose any preferences, ask user must choose at least one type
+  if (poolOfCharacters.length === 0) {
+    alert('Password require at least one character type! \nPlease choose your character types include in your password.');
+    userPref();
+  }
 }
 
 // function for generating a valid password for user
-function generatePassword() {
-
+function generatePassword(length) {
+  console.log(poolOfCharacters);
+  var result = "";
+  // generate a password with the length user giving and preferences that user chosen 
+  for (var i = 0; i < length; i++) {
+    result += poolOfCharacters[Math.floor(Math.random() * poolOfCharacters.length)];
+  }
+  console.log("random password is " + result);
+  // resetting password preferences
+  poolOfCharacters = "";
+  return result;
 }
 
 // Add event listener to generate button
