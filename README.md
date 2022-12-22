@@ -2,9 +2,12 @@
 
 ## Description 
 
-    This password generator is for employee with access to sensitive data. It randomly generate a password that meets certain criteria user wants.
-
+    This password generator is for employee with access to sensitive data. 
+    It randomly generate a password that meets certain criteria user wants.
     It could create a strong password that provides great security. 
+
+    Passwords this generator create are between 8 to 128 characters. 
+    Characters included are uppercase and lowercase letters, numbers, and special characters.
 
 
 Github Repo: https://github.com/byxzESC/03-password-generator
