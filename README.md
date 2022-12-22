@@ -2,6 +2,9 @@
 
 ## Description 
 
+    This password generator is for employee with access to sensitive data. It randomly generate a password that meets certain criteria user wants.
+
+    It could create a strong password that provides great security. 
 
 
 Github Repo: https://github.com/byxzESC/03-password-generator
@@ -20,11 +23,24 @@ If your README is very long, add a table of contents to make it easy for users t
 
 ## Installation/ Instruction
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Step 1. click on big red Generate Password Button
+
+Step 2. type in length you like for your password
+
+Step 3. clicking ok or cancel to include characters inside your password.
 ![start](/assets/images/screenshot1.JPG)
-![console_log](/assets/images/result&process.JPG)
+
+> Password must between minium of 8 to a maximum of 128 characters !!
+
 ![edgecase_1](/assets/images/edgecase1.JPG)
+
+> Password must include at least one type of characters!!
+
 ![edgecase_2](/assets/images/edgecase2.JPG)
+
+> How does the generator work.
+
+![console_log](/assets/images/result&process.JPG)
 
 ## Usage 
 
