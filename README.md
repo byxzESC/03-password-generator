@@ -6,7 +6,7 @@
     It randomly generate a password that meets certain criteria user wants.
     It could create a strong password that provides great security. 
 
-    Passwords this generator create are between 8 to 128 characters. 
+    Passwords this generator creates are between 8 to 128 characters. 
     Characters included are uppercase and lowercase letters, numbers, and special characters.
 
 
