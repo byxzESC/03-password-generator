@@ -14,6 +14,9 @@ Github Repo: https://github.com/byxzESC/03-password-generator
 
 Deployed Page: https://byxzesc.github.io/03-password-generator/
 
+                Example Password
+![example](/assets/images/example.JPG)
+
 ## Table of Contents 
 
 If your README is very long, add a table of contents to make it easy for users to find what they need.
@@ -25,12 +28,17 @@ If your README is very long, add a table of contents to make it easy for users t
 
 
 ## Installation/ Instruction
+    N/A
+
+
+## Usage 
 
 Step 1. click on big red Generate Password Button
 
 Step 2. type in length you like for your password
 
 Step 3. clicking ok or cancel to include characters inside your password.
+
 ![start](/assets/images/screenshot1.JPG)
 
 > Password must between minium of 8 to a maximum of 128 characters !!
@@ -45,14 +53,7 @@ Step 3. clicking ok or cancel to include characters inside your password.
 
 ![console_log](/assets/images/result&process.JPG)
 
-## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-
-![example](/assets/images/example.JPG)
 
 
 ## Credits
