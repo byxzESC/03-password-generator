@@ -27,7 +27,7 @@ If your README is very long, add a table of contents to make it easy for users t
 * [License](#license)
 
 
-## Installation/ Instruction
+## Installation
     N/A
 
 
